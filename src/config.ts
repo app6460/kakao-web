@@ -9,8 +9,6 @@ export const DefaultConfig: IRequestConfig & ILoginConfig = {
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
 
     serviceURL: 'https://accounts.kakao.com/weblogin/account/info',
-
-    parseCookie: true,
 };
 
 export interface IRequestConfig {
@@ -19,8 +17,6 @@ export interface IRequestConfig {
 
 export interface ILoginConfig {
     serviceURL: string
-
-    parseCookie: boolean
 }
 
 
