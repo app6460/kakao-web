@@ -1,14 +1,23 @@
 {
-  "name": "kakao-login",
+  "name": "kakao-web",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Kakao Web Authorization client in nodejs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/app6460/kakao-web.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "fix": "eslint --fix src/*.ts"
+  },
+  "keywords": [
+    "kakao",
+    "login"
+  ],
+  "author": "app6460",
+  "license": "MIT",
   "devDependencies": {
     "@types/crypto-js": "^4.1.3",
     "@types/tough-cookie": "^4.0.4",
