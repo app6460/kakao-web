@@ -10,7 +10,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "fix": "eslint --fix src/*.ts"
+    "fix": "eslint --fix src/**/*"
   },
   "keywords": [
     "kakao",
