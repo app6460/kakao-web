@@ -4,13 +4,19 @@
  * Copyright (c) app6460. Licensed under the MIT License.
  */
 
+export interface ITiaraConfig {
+    referer: string;
+    section: string;
+    page: string;
+}
+
 export class TiaraFactory {
     // eslint-disable-next-line max-len
     private static seed = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
     private constructor() {}
 
-    public static generateTiara(referer: string) {
+    public static generateTiara(config: ITiaraConfig) {
         const tuid = this.generateRandomUUIDWithDateTime();
         const uuid = this.generateRandomUUIDWithDateNumber();
         const isuid = this.generateRandomUUIDWithDateNumber();
@@ -29,9 +35,9 @@ export class TiaraFactory {
                 svcdomain: 'accounts.kakao.com',
                 deployment: 'production',
                 url: 'https://accounts.kakao.com/login/',
-                referrer: referer,
-                section: 'login',
-                page: 'page-login',
+                referrer: config.referer,
+                section: config.section,
+                page: config.page,
             },
             etc: {
                 client_info: {
@@ -45,7 +51,7 @@ export class TiaraFactory {
             },
             action: {
                 type: 'Pageview',
-                name: 'page-login',
+                name: config.page,
                 kind: '',
             },
         };
