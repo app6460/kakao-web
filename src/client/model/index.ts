@@ -6,3 +6,4 @@
 
 export * from './login';
 export * from './login-info';
+export * from './two-factor';
