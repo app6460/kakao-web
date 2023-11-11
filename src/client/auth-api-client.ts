@@ -12,7 +12,6 @@ import CryptoJS from 'crypto-js';
 import { AllConfig, DefaultConfig } from '../config';
 import {
     ILoginInfoResponse,
-    ILoginForm,
     ILoginResponse,
     ILoginResult,
     LoginStatus,
@@ -26,6 +25,12 @@ import {
     ITiaraConfig,
     TiaraFactory,
 } from '../tiara';
+
+export interface ILoginForm {
+    email: string;
+    password: string;
+    keepLogin?: boolean;
+}
 
 export class AuthApiClient {
     private config: AllConfig;

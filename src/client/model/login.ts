@@ -19,12 +19,6 @@ export interface ILoginResponse {
     status: number;
 }
 
-export interface ILoginForm {
-    email: string;
-    password: string;
-    keepLogin?: boolean;
-}
-
 export interface ILoginResult {
     response: ILoginResponse;
     cookieJar: CookieJar;
