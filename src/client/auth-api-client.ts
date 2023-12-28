@@ -69,7 +69,7 @@ export class AuthApiClient {
         });
     }
 
-    public static create(config: Partial<AllConfig> = DefaultConfig): AuthApiClient {
+    public static async create(config: Partial<AllConfig> = DefaultConfig) {
         return new AuthApiClient({
             ...DefaultConfig,
             ...config,

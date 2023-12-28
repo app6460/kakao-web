@@ -14,11 +14,11 @@ npm i --save kakao-web
 ```typescript
 import { AuthApiClient } from 'kakao-web';
 
-const apiClient = AuthApiClient.create({
-    serviceURL: 'https://example.com',
-});
-
 async function main() {
+    const apiClient = await AuthApiClient.create({
+        serviceURL: 'https://example.com',
+    });
+
     const res = await apiClient.login({
         email: 'email@example.com',
         password: 'password',
@@ -34,11 +34,11 @@ main();
 ```typescript
 import { AuthApiClient, LoginStatus } from 'kakao-web';
 
-const apiClient = AuthApiClient.create({
-    serviceURL: 'https://example.com',
-});
-
 async function main() {
+    const apiClient = await AuthApiClient.create({
+        serviceURL: 'https://example.com',
+    });
+    
     const res = await apiClient.login({
         email: 'email@example.com',
         password: 'password',
