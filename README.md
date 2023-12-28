@@ -33,12 +33,6 @@ main();
 ### Login with two-step verification
 ```typescript
 import { AuthApiClient, LoginStatus } from 'kakao-web';
-import { createInterface } from 'readline';
-
-const rl = createInterface({
-    input: process.stdin,
-    output: process.stdout,
-});
 
 const apiClient = AuthApiClient.create({
     serviceURL: 'https://example.com',
