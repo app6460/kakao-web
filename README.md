@@ -38,7 +38,7 @@ async function main() {
     const apiClient = await AuthApiClient.create({
         serviceURL: 'https://example.com',
     });
-    
+
     const res = await apiClient.login({
         email: 'email@example.com',
         password: 'password',
@@ -60,7 +60,7 @@ async function main() {
                 console.log(cookieJar);
 
                 process.exit(0);
-            } else {
+            } else if (response.status !== LoginStatus.TWO_FACTOR) {
                 console.error(`error with status ${response.status}`);
 
                 process.exit(1);
